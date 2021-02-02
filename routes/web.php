@@ -19,4 +19,4 @@ Route::get('/', [InicioController::class, "index"]);
 Route::get('/contacto', [InicioController::class, "contacto"]);
 
 Route::get('/noticias', [NoticiasController::class, "lista"])->name("noticias");
-Route::get('/noticias/{noticia}', [NoticiasController::class, "detalles"])->name("noticias.detalles");
+Route::get('/noticias/{id}', [NoticiasController::class, "detalles"])->name("noticias.detalles");
