@@ -8,6 +8,10 @@ use App\Models\Noticia;
 
 class NoticiasController extends Controller
 {
+    public function __construct() {
+        $this->middleware("auth");
+    }
+
     //Listar
     public function index() {
         $noticias = Noticia::all();
