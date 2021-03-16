@@ -63,7 +63,7 @@
     @php
       $foto = "default.png";
       if(Auth::user()->foto) {
-        $foto = "Auth::user()->foto;
+        $foto = Auth::user()->foto;
       } 
     @endphp
 
