@@ -22,10 +22,10 @@ use App\Http\Controllers\Admin\TableroController;
 require __DIR__.'/auth.php';
 
 //rutas de noticias
-Route::get('/', [InicioController::class, "index"]);
+/* Route::get('/', [InicioController::class, "index"]); */
 Route::get('/contacto', [InicioController::class, "contacto"]);
 
-Route::get('/noticias', [NoticiasController::class, "lista"])->name("noticias");
+Route::get('/', [NoticiasController::class, "lista"])->name("noticias");
 Route::get('/noticias/{id}', [NoticiasController::class, "detalles"])->name("noticias.detalles");
 
 //rutas del admin de noticias
